@@ -1,0 +1,26 @@
+<div class="container col-lg-6">
+  <h1 class="text-center" style="color:#9e1493; font-family:'Times New Roman'; font-weight: 800;">Retailer Login</h1>
+  <div class="card">
+    <div class="card-body">
+      <form class="form-group" ngNativeValidate>
+       <!-- <div class="alert alert-warning"></div>
+        <div class="alert alert-success"></div>-->
+        <div class="form-group">
+          <label for="email">User Name :</label>
+          <input type="text" class="form-control" id="username" [(ngModel)]="rname" placeholder="Enter User Name"
+            name="username" required>
+        </div>
+        <div class="form-group">
+          <label for="pwd">Password:</label>
+          <input type="password" class="form-control" [(ngModel)]="password" id="password" placeholder="Enter password"
+            name="password" required>
+        </div>
+        <br>
+        <button id=b1 (click)="checkLogin()" style="background-color:#9e1493;" class="btn btn-success">Login</button>
+        <button (click)="retailerRegister()" style="background-color:#9e1493;" class="btn btn-success">Not Registered? Register</button>
+        <br>
+        <a href="https://www.google.com" style="margin: 0px 180px;">ForgetPassword</a>
+      </form>
+    </div>
+  </div>
+</div>

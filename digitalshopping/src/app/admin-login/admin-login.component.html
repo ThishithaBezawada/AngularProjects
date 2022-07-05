@@ -1,0 +1,26 @@
+<div class="container col-lg-6">
+    <h1 class="text-center" style="color:#9e1493;text-align: center; font-family:'Times New Roman';font-weight:800;font-size:40px;">Admin Login</h1>
+    <div class="card">
+      <div class="card-body">
+        <form class="form-group" ngNativeValidate>
+          <div class="alert alert-warning" *ngIf='invalidLogin'>{{errorMessage}}</div>
+          <div class="alert alert-success" *ngIf='loginSuccess'>{{successMessage}}</div>
+          <div class="form-group">
+            <label for="email">User Name :</label>
+            <input type="text" class="form-control" id="username" [(ngModel)]="aname" placeholder="Enter User Name"
+              name="username" required>
+          </div>
+          <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" [(ngModel)]="password" id="password" placeholder="Enter password"
+              name="password" required>
+          </div>
+        <br>
+          <button id=b1 (click)=checkLogin() style="background-color:#9e1493;" class="btn btn-success">Login</button>
+          <button (click)="adminRegister()" style="background-color:#9e1493" class="btn btn-success">NotRegistered? Register</button>
+          <br>
+          <a href="https://www.google.com" style="margin: 0px 180px;">ForgetPassword</a>
+        </form>
+      </div>
+    </div>
+  </div>
