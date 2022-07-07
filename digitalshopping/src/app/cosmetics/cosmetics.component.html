@@ -1,0 +1,12 @@
+<h1 class="text-center" style="color:#9e1493;">Cosumetics</h1>
+<div *ngIf="products">
+    <div *ngFor="let product of products" class="d-flex p-5 m-4 justify-content-center">
+        <img [src]="product.imgpath" style="width: 150px; height: 150px; float: left;">
+        <p style="margin-left: 25px;">ProductName : {{ product.name }}<br><br> ProductBrand :
+            {{product.brand}}<br><br> Price : {{product.price}}</p>
+        <button (click)="gotocart(product.id)" style="background-color: #9e1493; width: 150px; height: 40px; margin-left: 20px; margin-top: 30px;"
+            class="btn btn-success">Cart</button>
+        <button (click)="gotocompare(product.id)" style="background-color: #9e1493; width: 150px; height: 40px; margin-left: 20px; margin-top: 30px;"
+            class="btn btn-success">Compare</button>
+    </div>
+</div>
